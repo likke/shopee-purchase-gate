@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Shopee Purchase Gate",
+  "version": "1.0.0",
+  "description": "Prevent impulse purchases on Shopee with reflection questions and cooling-off periods",
+  "author": "Flare Castro",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://shopee.ph/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://shopee.ph/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "default_title": "Shopee Purchase Gate - Prevent Impulse Purchases"
+  }
+}
